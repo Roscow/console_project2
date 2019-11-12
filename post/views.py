@@ -17,8 +17,8 @@ def programadores_list(request):
 
 #muestra un listado de los proyectos por fecha de creacion 
 def proyectos_list(request):
-    listado = proyecto.objects.all().order_by('fecha_creacion')
-    return render(request, 'post/projects.html', {'listado':listado})
+    listado = Proyecto.objects.all().order_by('fecha_creacion')
+    return render(request, 'post/proyectos.html', {'listado':listado})
 
 
 #realiza una busqueda de un proyecto 
@@ -26,3 +26,6 @@ def proyecto_search(request):
     listado = Programador.objects.all().order_by('correo')
     return render(request, 'post/#', {'posts':posts})
 # Create your views here.
+
+def nosotros(request):   
+    return render(request, 'post/nosotros.html')

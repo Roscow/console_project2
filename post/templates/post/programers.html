@@ -1,0 +1,19 @@
+{% extends 'post/base.html' %}
+{% load staticfiles %}
+
+{% block content %}   
+        
+    <p>este es mi bloque programadores </p>   
+    {% for programer in listado %}			
+        {{programer.nombre}}
+        <br>
+        {{programer.correo}}
+        <br>
+        {{programer.bio}}
+        <br>
+        {{programer.alma_mater}}
+        <br><br><br>
+    {% endfor  %}
+
+   
+{% endblock %}
