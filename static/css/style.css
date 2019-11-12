@@ -1,0 +1,106 @@
+html{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+body{
+    background: linear-gradient(blue, orange);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+
+}
+
+
+.container{
+
+}
+
+div{
+    border: 0px solid black;
+}
+
+.title{
+    padding-top: 10px;
+    font-weight: 800;
+    color: transparent;
+    font-size: 100px;
+    background: url(../img/img1.jpg) repeat;
+    background-position: center center;
+    background-size: 20%;
+    -webkit-background-clip: text;
+    position: relative;
+    text-align: center;
+    line-height: 90px;
+    letter-spacing: -5px;
+}
+
+
+
+.subtitle{
+    color: white;
+    font-size: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background: orangered;
+    border-radius: 10px;
+    margin-top: 20px;
+
+  }
+
+  /* Navbar links */
+  #navbar a {
+
+    display: block;
+    color: #f2f2f2;
+    padding: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+
+#navbar div{
+    border: 0px solid white;
+
+}
+
+
+.foot_bar{
+    display: block;
+    border-radius: 10px;
+    background: rgb(3, 3, 163);
+    padding: 10px;
+    color: white;
+}
+
+
+.page:hover{
+    background-color: orange;
+}
+
+
+.social_link{
+    width: 30px;
+    border-radius: 10px;
+    padding: -5px;
+}
+
+.foot_line{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,43 @@
+{% load  staticfiles %}
+<html>
+    <head>
+        <title>Console project</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flexboxgrid.css' %}">
+    </head>
+    <body>
+            <div class="container">
+                <div class="row">
+                    <div class="title col-xs-12 col-lg-12">Console</div>
+
+                    <div class="subtitle col-xs-12 col-lg-12">keep it simple!</div>
+                </div>
+
+                <nav>
+                    <div class="row" id="navbar">
+                        <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="Index.html">Inicio</a></div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="Proyectos.html">Programadores</a></div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="#home">Proyectos</a></div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="Ides.html">Nosotros</a></div>
+                    </div>
+                </nav>
+
+
+                <div class="row foot_bar">
+                    <div class="col-xs-12 col-lg-8 foot_line">
+                        Desarrollado con Django - 2019
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+                            <a href="#"><img class="social_link" src="{% static 'img/iconos/face.png' %}"></a>
+                            <a href="https://www.youtube.com/channel/UCDCABqHT1jP_HG5ONEEaBOg"><img class="social_link"  src="{% static 'img/iconos/yt.png' %}"></a>
+                            <a href="https://www.linkedin.com/in/nicolas-valdes-35aba1154/"><img class="social_link"  src="{% static 'img/iconos/link.png' %}"></a>
+                            <a href="#"><img class="social_link"  src="{% static 'img/iconos/tumb.png' %}"></a>
+                            <a href="https://wa.me/+56977619761"><img class="social_link"  src="{% static 'img/iconos/wasap.png' %}"></a>
+                    </div>
+                </div>
+            </div>
+        </body>
+</html>
