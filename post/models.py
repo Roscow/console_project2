@@ -7,7 +7,7 @@ class Programador(models.Model):
     correo =models.CharField(max_length=200)
     bio =  models.TextField()
     alma_mater = models.CharField(max_length=200)
-    #imagen#
+    avatar = models.ImageField(null=True, upload_to='albums/images/')
 
     def __str__(self):
         #llamar el nombre desde nombre(auth.user)

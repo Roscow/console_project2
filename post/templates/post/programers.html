@@ -10,7 +10,9 @@
     {% for programer in listado %}	
         <div class="col-lg-11 col-xs-11 card_programer">
             <div class="col-lg-2 col-xs-12 foto_div ">               
-                <img class="foto_perfil_programer"   src="{% static 'img/usuario.jpg'%}">
+                <!--<img class="foto_perfil_programer"   src="{% static 'img/usuario.jpg'%}">-->
+                <img class="foto_perfil_programer"  src="{{programer.avatar.url}}">                                          
+        
             </div>
             <div class="col-lg-10 col-xs-12 info_div">  
                 <h2 class="tit_nombre">{{programer.nombre}}</h2>                                             
@@ -20,7 +22,7 @@
                 <br>
                 {{programer.bio}}
                 <br>
-                {{programer.alma_mater}}   
+                {{programer.alma_mater}}                
             </div>              
         </div>		        
     {% endfor  %}
