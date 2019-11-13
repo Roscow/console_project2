@@ -2,7 +2,29 @@
 {% load staticfiles %}
 
 {% block content %}   
-        
-    <p>este es mi bloque proyectos </p>              
+<div class="row">
+    <div class="col-lg-12 col-xs-12">
+        <h1 class="titulo">Proyectos</h1>
+    </div>
+    
+    {% for proyectos in listado %}	
+        <div class="col-lg-11 col-xs-11 card_project">
+            <div class="col-lg-6 col-xs-12 foto_project">   
+                <img class="foto_project" src="{{proyectos.foto_consola.url}}" >                            
+            </div>	
+            <div class="col-lg-6 col-xs-12 info_project">
+                 <h2 class="tit_nombre">{{proyectos.titulo}}</h2>  
+                 <h3>{{proyectos.lenguaje}}</h3>
+                 {{proyectos.descripcion}} 
+                 <br>                                             
+                 <p>Enviado por {{proyectos.autor}} <br> {{proyectos.fecha_creacion}} </p>                  
+                 <a href="{{proyectos.link_descarga}}" target="_blank"><img class="btn_down" src="{% static 'img/downl.png' %}"> </a>     
+                 
+
+                                                                                                                   
+            </div>
+        </div>	        
+    {% endfor  %}
+</div>
    
 {% endblock %}

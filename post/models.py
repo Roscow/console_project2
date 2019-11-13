@@ -24,13 +24,15 @@ list_alma_mater = (('0','Ninguna'),('01','??'),('1','U de Chile'),('2','U de San
 ('58','IP libertador de los Andes'),('59','Duoc UC'),('60','Esucomex'),('61','AIEP'),
 ('62','Arcos'),('63','ENAC'),('64','ICEL'),('65','Manpower'))
 
-list_lenguajes = (('0','??'),('1','Assembly'),('1,5','C'),
-('2','C++'),('3','C#'),('4','Cobol'),('5','Delphi'),('6','F'),('7','F#'),
-('8','Fortran'),('9','Haskell'),('10','Java'),('11','Javascript'),('12','Lisp'),
-('13','MATLAB'),('14','Objective-C'),('15','Pascal'),('16','Perl'),('17','PHP'),
-('18','PL/sql'),('19','PowerShell'),('20','Prolog'),('21','Python'),('22','Ruby'),
-('23','swift'),('24','T-sql'),('25','Visual Basic'))    
+list_lenguajes = (('??','??'),('Assembly','Assembly'),('C','C'),
+('C++','C++'),('C#','C#'),('Cobol','Cobol'),('Delphi','Delphi'),('F','F'),('F#','F#'),
+('Fortran','Fortran'),('Haskell','Haskell'),('Java','Java'),('Javascript','Javascript'),('Lisp','Lisp'),
+('MATLAB','MATLAB'),('Objective-C','Objective-C'),('Pascal','Pascal'),('Perl','Perl'),('PHP','PHP'),
+('PL/sql','PL/sql'),('PowerShell','PowerShell'),('Prolog','Prolog'),('Python','Python'),('Ruby','Ruby'),
+('swift','swift'),('T-sql','T-sql'),('Visual Basic','Visual Basic'))    
 
+
+list_estados= (('En espera','En espera'),('En revision','En revision'),('Rechazado','Rechazado'),('Aceptado','Aceptado'))
 
 
 
@@ -47,15 +49,18 @@ class Programador(models.Model):
         #llamar el nombre desde nombre(auth.user)
         return self.correo
 
+
+
+
 class Proyecto(models.Model):
     autor = models.ForeignKey('Programador', on_delete=models.CASCADE)
-    estado_post = models.CharField(max_length=200)
+    estado_post = models.CharField(max_length=200, choices = list_estados)
     link_descarga = models.CharField(max_length=200)
     lenguaje = models.CharField(max_length=200, choices= list_lenguajes)
     titulo = models.CharField(max_length=200)
     descripcion = models.TextField()
     fecha_creacion = models.DateTimeField(default=timezone.now)
-    
+    foto_consola = models.ImageField(null=True, upload_to='albums/images2/')
     
     def __str__(self):
         return self.titulo   
