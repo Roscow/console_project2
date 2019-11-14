@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from .models import  Programador, Proyecto
+from .models import  Programador, Proyecto, Post
 from django.utils import timezone
 
 
 #muestra un inicio de la pagina
-def inicio(request):   
-    return render(request, 'post/index.html')
+def inicio(request):  
+    listado = Post.objects.all()
+    return render(request, 'post/index.html', {'listado':listado})
 
 
 

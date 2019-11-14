@@ -2,7 +2,26 @@
 {% load staticfiles %}
 
 {% block content %}   
-        
-    <p>este es mi bloque inicio </p>              
-   
+<div class="row">
+    <h1> Entradas</h1>
+    <div class="col-lg-12 col-xs-12 listado">
+        <ul>
+        {% for entrada in listado %}	
+            <a href="#{{entrada.titulo}}"><li>{{entrada.titulo}}</li></a>                        
+            
+        {% endfor %}
+        </ul>
+    <div>
+</div>
+
+{% for entrada in listado %}	
+<div class="col-lg-12 col-xs-12 card_programer">
+    <h1 id="{{entrada.titulo}}">{{entrada.titulo}} </h1> 
+    <br>      
+    {{entrada.text}}
+    <br>
+    <p class="tit_obl">{{entrada.autor}}</p>
+                
+</div>		        
+{% endfor  %}   
 {% endblock %}

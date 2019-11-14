@@ -50,8 +50,6 @@ class Programador(models.Model):
         return self.correo
 
 
-
-
 class Proyecto(models.Model):
     autor = models.ForeignKey('Programador', on_delete=models.CASCADE)
     estado_post = models.CharField(max_length=200, choices = list_estados)
@@ -64,3 +62,12 @@ class Proyecto(models.Model):
     
     def __str__(self):
         return self.titulo   
+
+
+class Post(models.Model):
+    autor = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    titulo = models.CharField(max_length=200)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.titulo 

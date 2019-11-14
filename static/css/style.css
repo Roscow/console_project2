@@ -204,3 +204,13 @@ h1{
 .info_project{
     margin-left: 10px;
 }
+
+.listado a{
+    color: white;
+    text-decoration: underline;
+}
+
+.tit_obl{
+    font-style: oblique;
+    font-weight: bold;
+}
