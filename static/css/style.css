@@ -214,3 +214,15 @@ h1{
     font-style: oblique;
     font-weight: bold;
 }
+
+.page2{
+    
+    border: 1px solid white;
+}
+.page2 a{
+    color: white;
+}
+
+.page2:hover{
+    background-color: orange;
+}

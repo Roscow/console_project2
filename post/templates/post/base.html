@@ -22,8 +22,17 @@
                         <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="{% url 'programadores_list' %}">Programadores</a></div>
                         <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="{% url 'proyectos_list' %}">Proyectos</a></div>
                         <div class="col-xs-6 col-sm-3 col-md-3 page"><a href="{% url 'nosotros' %}">Nosotros</a></div>
+                    </div>   
+                    
+                    <div class="row" id="sub_bar">
+                        <div class="col-xs-6 col-sm-3 col-md-3 page2"><a href="{% url 'inicio' %}">Login</a></div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 page2"><a href="{% url 'programadores_list' %}">Mi Perfil</a></div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 page2"><a href="#"></a></div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 page2"><a href="#"></a></div>
                     </div>
                 </nav>
+
+                
                 <!-- contenido-->               
                     {% block content %}              
    
